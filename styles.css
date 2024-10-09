@@ -1,0 +1,180 @@
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+
+:root {
+  /* colors */
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+
+  --color-very-dark-blue: hsl(234, 12%, 34%);
+  --color-grayish-blue: hsl(229, 6%, 66%);
+  --color-very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* Global */
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4.75rem;
+  padding: 5rem 2rem;
+}
+
+/* Header */
+
+header {
+  display: grid;
+  gap: 1rem;
+
+  h1 {
+    color: #4d4f62;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.01044rem;
+
+    span {
+      font-weight: 300;
+      display: block;
+    }
+  }
+
+  p {
+    color: #4d4f62;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem; /* 166.667% */
+    letter-spacing: 0.0065rem;
+    opacity: 0.5;
+  }
+}
+
+/* Card */
+
+.list_of_cards {
+  display: grid;
+  gap: 1.56rem;
+  place-items: center;
+}
+
+.card {
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  overflow: hidden;
+  padding: 1.69rem 1.75rem;
+  position: relative;
+  display: grid;
+  width: 19.4375rem;
+  height: 13.875rem;
+
+  .border {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.222rem;
+    width: 100%;
+  }
+
+  h1 {
+    color: #4d4f62;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  p {
+    color: #4d4f62;
+    font-family: Poppins;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4375rem; /* 176.923% */
+    letter-spacing: 0.00563rem;
+    opacity: 0.5;
+  }
+
+  img {
+    width: 3.5625rem;
+    height: 3.5625rem;
+    justify-self: end;
+    margin-top: 2.06rem;
+  }
+}
+
+.border_cyan {
+  background-color: var(--color-cyan);
+}
+
+.border_red {
+  background-color: var(--color-red);
+}
+
+.border_orange {
+  background-color: var(--color-orange);
+}
+
+.border_blue {
+  background-color: var(--color-blue);
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Break Points */
+
+@media only screen and (min-width: 1024px) {
+  main {
+    align-items: center;
+  }
+
+  header {
+    width: 33.75rem;
+  }
+
+  .list_of_cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 15.625rem);
+  }
+
+  .card {
+    max-width: 21.875rem;
+    height: 15.625rem;
+  }
+
+  .card_right_side {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  .card_left_side,
+  .card_right_side {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .card_center {
+    grid-column-start: 2;
+  }
+}
